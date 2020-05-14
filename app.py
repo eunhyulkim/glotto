@@ -66,8 +66,8 @@ def get_lotto_blocks(tickets):
     """
     last_code = Wcode.query.order_by(desc("no")).first()
     text = str(last_code.no + 1)
-    text += "회차 예상 5장의 로또 티켓입니다. 대박 나세요:moneybag:!"
-    blocks = get_base_blocks(text)
+    text += "회차를 위한 4장의 로또 티켓입니다. 대박 나세요:moneybag:!"
+    blocks = get_base_context_blocks(text)
     ticket_blocks = {
         'type': "section",
         'fields': [
